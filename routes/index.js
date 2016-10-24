@@ -1,4 +1,4 @@
-var Dota2api = require('dota2api');
+var Dota2api = require('../modules/dota2api.js');
 var key = '5276D16C651DB0FF86E7E612A3782F45';
 var dota = new Dota2api(key);
 var bodyParser = require('body-parser');
@@ -179,30 +179,6 @@ module.exports = function(app){
 											_res.send(res);
 										}
 									});
-									/** 一次性请求多个玩家的个人信息
-									var url = 'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key='+key+'&steamids=7656'+getSteamid(res.players[0].account_id);
-									for(var i=1;i<res.players.length;i++){
-										url += ',7656'+getSteamid(res.players[i].account_id);
-									}
-									request(url,function(err,res2,body){
-										if(!err && res2.statusCode===200){
-											var res2 = JSON.parse(body);
-											var nullplayer = {personaname:'不明群众',avatar:'http://oalqimdk5.bkt.clouddn.com/1609165315339.jpg'};
-											for(var i=0;i<res2.response.players.length;i++){
-												for(var j=0;j<res2.response.players.length;j++){
-													if('7656'+getSteamid(res.players[i].account_id)===res2.response.players[j].steamid){
-														res.players[i].playerinfo = res2.response.players[j];
-													}
-												}
-											}
-											for(var i=0;i<res.players.length;i++){
-												if(!res.players[i].playerinfo){
-													res.players[i].playerinfo = nullplayer;
-												}
-											}
-											_res.send(res);
-										}
-									});*/
 								}
 							});
 						}
