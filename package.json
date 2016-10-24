@@ -10,6 +10,10 @@
   "license": "BSD",
   "dependencies": {
     "express": "~4.14.0",
-    "body-parser": "~1.15.2"
+    "body-parser": "~1.15.2",
+    "mysql": "~2.11.1",
+    "easymysql": "~0.2.7",
+    "async": "~2.0.1",
+    "request": "~2.75.0"
   }
 }
