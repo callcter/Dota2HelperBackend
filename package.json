@@ -13,11 +13,17 @@
   "author": "callcter",
   "license": "BSD",
   "dependencies": {
-    "express": "~4.14.0",
-    "body-parser": "~1.15.2",
-    "mysql": "~2.11.1",
-    "easymysql": "~0.2.7",
     "async": "~2.0.1",
-    "request": "~2.75.0"
+    "body-parser": "~1.15.2",
+    "easymysql": "~0.2.7",
+    "express": "~4.14.0",
+    "express-favicon": "^2.0.0",
+    "jade": "^1.11.0",
+    "morgan": "^1.7.0",
+    "mysql": "~2.11.1",
+    "react": "^15.3.2",
+    "react-router": "^3.0.0",
+    "request": "~2.75.0",
+    "serve-favicon": "^2.3.0"
   }
 }
