@@ -28,13 +28,7 @@ router.get('/',function(req,res){
 });
 router.get('/vpntest',function(req,res){
 	var _res = res;
-	// httpvpn.request(opt,function(res){
-		// if(err){
-		// 	_res.send(err);
-		// }else{
 			_res.send(opt);
-		// }
-	// });
 });
 router.get('/match',function(req,res){
 	var _res = res;

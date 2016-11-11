@@ -1,0 +1,47 @@
+.container{
+	width: 600px;
+	margin: 0 auto;
+}
+.h{
+	font-size: 40px;
+	text-align: center;
+	line-height: 60px;
+}
+.title,.source{
+	border: none;
+	margin-top: 20px;
+	border-bottom: 1px solid #ddd;
+	padding: 0 10px 5px;
+	font-size: 30px;
+	width: 580px;
+	outline: none;
+}
+.pickfile{
+	border: 2px dashed #ddd;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 3px;
+	padding: 60px 20px;
+	font-size: 16px;
+	color: #333;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+.editor{
+	min-height: 250px;
+}
+.submit{
+	border: 1px solid #ddd;
+	background: #999;
+	border-radius: 3px;
+	padding: 15px 0;
+	font-size: 16px;
+	color: #fff;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	cursor: pointer;
+}
