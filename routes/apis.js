@@ -7,7 +7,6 @@ var dota = new Dota2api(key);
 var bodyParser = require('body-parser');
 var async = require('async');
 var request = require('request');
-var httpvpn = require('http');
 
 //代码上传时修改数据库配置
 var mysql = require('mysql');
@@ -42,18 +41,7 @@ router.get('/matchByHero',function(req,res){
 		_res.send(res);
 	});
 });
-router.get('/heroes',function(req,res){
-	var _res = res;
-	dota.getHeroes(function(err,res){
-		_res.send(res);
-	});
-});
-router.get('/items',function(req,res){
-	var _res = res;
-	dota.getItems(function(req,res){
-		_res.send(res);
-	});
-});
+
 router.post('/matchlist',function(req,res){
 	var _res = res;
 	dota.getMatchHistory({

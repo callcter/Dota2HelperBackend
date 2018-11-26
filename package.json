@@ -4,7 +4,7 @@
   "description": "dota data get from valve",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "supervisor -i client app.js"
   },
   "repository": {
     "type": "git",
@@ -14,17 +14,24 @@
   "license": "BSD",
   "dependencies": {
     "async": "~2.0.1",
-    "body-parser": "~1.15.2",
-    "easymysql": "~0.2.7",
-    "express": "~4.14.0",
-    "express-favicon": "^2.0.0",
-    "jade": "^1.11.0",
-    "morgan": "^1.7.0",
-    "mysql": "~2.11.1",
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "dotenv": "^5.0.1",
+    "dox": "^0.9.0",
+    "express": "^4.16.3",
+    "graphviz": "0.0.8",
+    "jake": "^8.0.16",
+    "lodash": "^4.17.5",
+    "mysql2": "^1.5.3",
+    "pug": "^2.0.3",
     "qiniu": "^6.1.13",
-    "react": "^15.3.2",
-    "react-router": "^3.0.0",
+    "reload": "^2.2.2",
     "request": "~2.75.0",
-    "serve-favicon": "^2.3.0"
+    "sequelize": "^4.37.6",
+    "serve-favicon": "^2.3.0",
+    "superagent": "^3.8.2",
+    "superagent-charset": "^1.2.0",
+    "supervisor": "^0.12.0",
+    "viz.js": "^2.0.0"
   }
 }

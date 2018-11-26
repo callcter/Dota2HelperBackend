@@ -1,26 +1,33 @@
-var express = require('express');
-var path = require('path');
-var logger = require('morgan');
-var favicon = require('serve-favicon');
-var bodyParser = require('body-parser');
+require('dotenv').config()
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
-var apis = require('./routes/apis');
+const express = require('express')
+const http = require('http')
+const path = require('path')
+const favicon = require('serve-favicon')
+const bodyParser = require('body-parser')
+const reload = require('reload')
 
-var app = express();
+// const routes = require('./routes/index')
+// const users = require('./routes/users')
+// const apis = require('./routes/apis')
 
-app.set('views',path.join(__dirname,'views'));
-app.set('view engine','jade');
+const app = express()
 
-app.use(favicon(path.join(__dirname+'/public/favicon.ico')));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
-app.use(express.static(path.join(__dirname,'public')));
+app.set('views', path.join(__dirname,'views'))
+app.set('view engine','pug')
 
-app.use('/',routes);
-app.use('/users',users);
-app.use('/apis',apis);
+app.use(favicon(path.join(__dirname+'/public/favicon.ico')))
+app.use(bodyParser.json({limit: '1mb'}))
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.static(path.join(__dirname,'public')))
+app.use(express.static(path.join(__dirname,'file')))
 
-//上传时修改端口号为3000
-app.listen(3000);
+// app.use('/',routes)
+// app.use('/users',users)
+// app.use('/apis',apis)
+
+app.use(require('./controllers'))
+
+const server = http.createServer(app)
+reload(app)
+server.listen(4003, ()=>{})

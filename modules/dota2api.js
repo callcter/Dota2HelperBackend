@@ -69,7 +69,6 @@ Dota2Api.prototype.getHeroes = function(cb) {
   var config = {
     language: 'en'
   };
-
   this.request('IEconDOTA2_570', 'GetHeroes', config, cb);
 }
 
